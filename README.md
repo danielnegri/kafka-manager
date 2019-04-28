@@ -28,11 +28,11 @@ $ docker run -it --rm  -p 9000:9000 -e ZK_HOSTS="$ZK_HOSTS" danielnegri/kafka-ma
 
 The Kafka Manager image uses several environment variables which are easy to miss. While none of the variables are required, they may significantly aid you in using the image.
 
-- APPLICATION_SECRET="${APPLICATION_SECRET:-$(date +%s | sha256sum | base64 | head -c 64 ; echo)}"
-- HTTP_CONTEXT="${HTTP_CONTEXT:-/}"
-- ZK_HOSTS="${ZK_HOSTS:-zookeeper:2181}"
-- BASE_ZK_PATH="${BASE_ZK_PATH:-/kafka-manager}"
-- KAFKA_MANAGER_LOGLEVEL="${KAFKA_MANAGER_LOGLEVEL:-INFO}"
-- LOGGER_STARTUP_TIMEOUT="${LOGGER_STARTUP_TIMEOUT:-60s}"
-- KAFKA_MANAGER_CONFIG="${KAFKA_MANAGER_CONFIG:-./conf/application.conf}"
-- HTTP_PORT="${HTTP_PORT:-9000}"
+- `APPLICATION_SECRET="${APPLICATION_SECRET:-$(date +%s | sha256sum | base64 | head -c 64 ; echo)}"`
+- `HTTP_CONTEXT="${HTTP_CONTEXT:-/}"`
+- `ZK_HOSTS="${ZK_HOSTS:-zookeeper:2181}"`
+- `BASE_ZK_PATH="${BASE_ZK_PATH:-/kafka-manager}"`
+- `KAFKA_MANAGER_LOGLEVEL="${KAFKA_MANAGER_LOGLEVEL:-INFO}"`
+- `LOGGER_STARTUP_TIMEOUT="${LOGGER_STARTUP_TIMEOUT:-60s}"`
+- `KAFKA_MANAGER_CONFIG="${KAFKA_MANAGER_CONFIG:-./conf/application.conf}"`
+- `HTTP_PORT="${HTTP_PORT:-9000}"`
